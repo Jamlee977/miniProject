@@ -60,7 +60,7 @@ void exLength(char p1[], int& exLen, int len) {
     }
 }
 
-void firstDerF(int coeffecients[], int exp[], int exLen) {
+void firstDerOnSec(int coeffecients[], int exp[], int exLen) {
     int i;
     for (i = 0; i <= exLen; i++) {
         coeffecients[i] = coeffecients[i] * exp[i];
@@ -96,7 +96,7 @@ void firstDer(int coeffecients[], int exp[], int exLen) {
 
 void secondDer(int coeffecients[], int exp[], int exLen) {
     int i;
-    firstDerF(coeffecients, exp, exLen);
+    firstDerOnSec(coeffecients, exp, exLen);
     for (i = 0; i <= exLen; i++) {
         coeffecients[i] = coeffecients[i] * exp[i];
         exp[i] = exp[i] - 1;
@@ -160,7 +160,7 @@ int main() {
     co_ex(p1, coeffecients, exp, len);
     exLength(p1, exLen, len);
     
-    cout << endl << p1;
+    cout << endl << "The formula is: " p1;
 
     cout << endl;
     cout << "\nThe first derivative of this function is: ";
