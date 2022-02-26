@@ -160,7 +160,7 @@ int main() {
     co_ex(p1, coeffecients, exp, len);
     exLength(p1, exLen, len);
     
-    cout << endl << "The formula is: " p1;
+    cout << endl << "The formula is: " << p1;
 
     cout << endl;
     cout << "\nThe first derivative of this function is: ";
